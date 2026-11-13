@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Anushka 🎂</title>
+
+    <meta name="description" content="A special birthday surprise made with love for Anushka.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Background Decorations -->
+    <div class="background-decor" aria-hidden="true">
+        <span>💗</span>
+        <span>✨</span>
+        <span>🎀</span>
+        <span>💕</span>
+        <span>⭐</span>
+        <span>🦋</span>
+    </div>
+
+    <div class="ambient-particles" id="ambient-particles" aria-hidden="true"></div>
+    <canvas id="fireworks-canvas" aria-hidden="true"></canvas>
+
+    <!-- Confetti Container -->
+    <div id="confetti-container"></div>
+
+    <!-- =========================
+         SCREEN 1: WELCOME
+    ========================== -->
+
+    <section id="welcome-screen" class="screen active">
+
+        <div class="main-card">
+
+            <div class="top-label">⚠️ TOP SECRET SURPRISE ⚠️</div>
+
+            <div class="hero-emoji">🎀</div>
+
+            <h1>Happy Birthday, <span class="gradient-text">Anushka! 💗</span></h1>
+
+            <p class="description">
+                College gave me many memories, but meeting you gave me a bond I never knew I needed.
+                You're not my sister by blood, but you're definitely my sister by heart.
+            </p>
+
+            <!-- Countdown -->
+            <div class="countdown-box">
+
+                <h3>🎂 Birthday Countdown 🎂</h3>
+
+                <div class="countdown-grid">
+
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <small>Days</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <small>Hours</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <small>Minutes</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                        <small>Seconds</small>
+                    </div>
+
+                </div>
+
+                <p id="countdown-message">The excitement is loading... 💗</p>
+
+            </div>
+
+            <button class="primary-btn" id="start-btn">
+                Open Your Special Surprise 🎁
+            </button>
+
+            <p class="tiny-text">Made with lots of love and a little bit of madness ❤️</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 2: COLLEGE BOND QUIZ
+    ========================== -->
+
+    <section id="quiz-screen" class="screen">
+
+        <div class="main-card">
+
+            <div class="hero-emoji">🕵️‍♀️</div>
+
+            <p class="small-heading">A quick college-bond check-in...</p>
+
+            <h1>College Memories Quiz!</h1>
+
+            <p class="description">
+                Four very important questions about our favorite kind of friendship. 😄
+            </p>
+
+            <div class="quiz-progress">
+                <div id="quiz-progress-bar"></div>
+            </div>
+
+            <p id="quiz-number">Question 1 of 4</p>
+
+            <h2 id="quiz-question">Where did our special bond begin?</h2>
+
+            <div id="quiz-options" class="quiz-options"></div>
+
+            <p id="quiz-feedback" aria-live="polite"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 3: GIFT BOX
+    ========================== -->
+
+    <section id="gift-screen" class="screen">
+
+        <div class="main-card">
+
+            <div class="hero-emoji">🥳</div>
+
+            <h1>Access Granted!</h1>
+
+            <p class="description">
+                Congratulations Anushka! Your VIP birthday gift is waiting.
+            </p>
+
+            <div class="gift-box" id="gift-box" role="button" tabindex="0" aria-label="Open birthday gift">
+                <div class="gift-3d" id="gift-3d" aria-hidden="true">
+                    <span class="gift-lid"></span>
+                    <span class="gift-body"></span>
+                    <span class="gift-ribbon gift-ribbon-vertical"></span>
+                    <span class="gift-ribbon gift-ribbon-horizontal"></span>
+                    <span class="gift-bow gift-bow-left"></span>
+                    <span class="gift-bow gift-bow-right"></span>
+                    <span class="gift-bow-knot"></span>
+                </div>
+            </div>
+
+            <h2 id="gift-title">Something is hiding inside...</h2>
+
+            <p id="gift-description">Tap the gift box to reveal your surprise!</p>
+
+            <button class="primary-btn hidden" id="gift-next">
+                Continue ➜
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 4: PHOTO MEMORIES
+    ========================== -->
+
+    <section id="memories-screen" class="screen">
+
+        <div class="main-card memories-card">
+
+            <div class="hero-emoji">📸</div>
+
+            <h1>Our College Memories</h1>
+
+            <p class="description">
+                From campus conversations to completely unserious photos—here are some favorites! 😂
+            </p>
+
+            <!-- Edit each caption below to personalize the memory. -->
+            <div class="photo-gallery">
+
+                <div class="photo-card">
+                    <img src="assets/images/sis1.jpg" alt="College memory one with Anushka" loading="lazy" tabindex="0" role="button" aria-label="View college memory one">
+                    <p>Our first college-day chaos 📚</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="assets/images/sis2.jpg" alt="College memory two with Anushka" loading="lazy" tabindex="0" role="button" aria-label="View college memory two">
+                    <p>Caffeine, campus &amp; conversations ☕</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="assets/images/sis3.jpg" alt="College memory three with Anushka" loading="lazy" tabindex="0" role="button" aria-label="View college memory three">
+                    <p>Proof we never take a normal photo 😂</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="assets/images/sis4.jpg" alt="College memory four with Anushka" loading="lazy" tabindex="0" role="button" aria-label="View college memory four">
+                    <p>A little adventure, a favorite memory ✨</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="assets/images/sis5.jpg" alt="College memory five with Anushka" loading="lazy" tabindex="0" role="button" aria-label="View college memory five">
+                    <p>Best laughs, no explanation needed 💗</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="assets/images/sis6.jpg" alt="College memory six with Anushka" loading="lazy" tabindex="0" role="button" aria-label="View college memory six">
+                    <p>My chosen sister, always 💕</p>
+                </div>
+
+            </div>
+
+            <button class="primary-btn" id="video-btn">
+                Watch Your Birthday Video 🎬
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 5: BIRTHDAY VIDEO
+    ========================== -->
+
+    <section id="video-screen" class="screen">
+
+        <div class="main-card video-card">
+
+            <div class="hero-emoji">🎬</div>
+
+            <p class="small-heading">A little something just for you</p>
+
+            <h1 class="script-heading">Birthday memories...</h1>
+
+            <p class="description">
+                Press play, sit back and enjoy your little birthday film. 💗
+            </p>
+
+            <div class="video-frame" id="video-frame">
+                <video id="birthday-video" controls playsinline preload="metadata"
+                       poster="assets/videos/birthday-poster.svg"
+                       aria-label="Birthday video for Anushka">
+                    <source src="assets/videos/birthday-video.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <div class="video-error-panel hidden" id="video-error-panel" role="status">
+                    <span aria-hidden="true">🎞️</span>
+                    <strong>Your birthday film is waiting</strong>
+                    <p>Add <code>assets/videos/birthday-video.mp4</code> to bring this surprise to life.</p>
+                </div>
+            </div>
+
+            <p class="video-status" id="video-status" aria-live="polite">
+                Your birthday video is ready when you are.
+            </p>
+
+            <button class="primary-btn video-play-btn" id="video-play-btn" type="button" aria-label="Play birthday video">
+                ▶ Play video
+            </button>
+
+            <button class="primary-btn" id="letter-btn">
+                Continue to your letter 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 6: BIRTHDAY LETTER
+    ========================== -->
+
+    <section id="letter-screen" class="screen">
+
+        <div class="main-card">
+
+            <div class="hero-emoji">💌</div>
+
+            <h1 class="script-heading">Dear Anushka...</h1>
+
+            <div class="letter-content">
+
+                <p>
+                    Dear Anushka,
+                </p>
+
+                <p>
+                    Life has a funny way of introducing special people. We met in college, and somewhere between all the conversations, laughter, silly arguments and unforgettable memories, you became someone I genuinely call my sister.
+                </p>
+
+                <p>
+                    We may not share the same family name or childhood stories, but the bond we share is special in its own way.
+                </p>
+
+                <p>
+                    Thank you for being such a wonderful person. Never stop smiling, keep chasing your dreams, and keep being your crazy, amazing self.
+                </p>
+
+                <p>
+                    May this year bring you success, peace, happiness, new adventures and everything your heart wishes for.
+                </p>
+
+                <p>
+                    And yes, no matter how much I tease you, you will always have a special place in my life.
+                </p>
+
+                <p>Happy Birthday, Anushka! ❤️</p>
+
+                <p><strong>Your college brother,</strong><br>
+                Deepak</p>
+
+            </div>
+
+            <button class="primary-btn" id="cake-btn">
+                One Last Surprise 🎂
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SCREEN 7: FINAL CELEBRATION
+    ========================== -->
+
+    <section id="cake-screen" class="screen">
+
+        <div class="main-card">
+
+            <div class="hero-emoji">🎉</div>
+
+            <h1>To My Favourite College Sister 💖</h1>
+
+            <p class="description final-message">
+                Some bonds are not made by blood; they are made by memories, trust, laughter and care. So lucky to have met you. Keep shining, Anushka!
+            </p>
+
+            <div class="birthday-cake" id="birthday-cake" role="button" tabindex="0" aria-label="Blow out birthday candles">
+                <div class="cake-candles" aria-hidden="true">
+                    <span class="candle"><i class="candle-flame"></i></span>
+                    <span class="candle"><i class="candle-flame"></i></span>
+                    <span class="candle"><i class="candle-flame"></i></span>
+                </div>
+                <div class="cake-top"></div>
+                <div class="cake-layer cake-layer-top"></div>
+                <div class="cake-layer cake-layer-bottom"></div>
+            </div>
+
+            <h2 id="cake-message">Make a wish and tap the cake! 🕯️</h2>
+
+            <button class="primary-btn" id="blow-candles-btn">
+                Blow out the candles ✨
+            </button>
+
+            <button class="primary-btn" id="celebrate-btn">
+                Celebrate with fireworks! 🎊
+            </button>
+
+            <button class="secondary-btn" id="replay-btn">
+                Replay Surprise ↻
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Background Music -->
+    <audio id="birthday-music" loop preload="none">
+        <source src="assets/music/birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="music-control" aria-label="Background music controls">
+        <div class="music-status" id="music-status" aria-live="polite">Music is off</div>
+        <label class="volume-control" for="music-volume">
+            <span>Volume</span>
+            <input id="music-volume" type="range" min="0" max="1" step="0.05" value="0.65" aria-label="Music volume">
+        </label>
+        <button id="music-toggle" class="music-toggle" aria-label="Play birthday music" aria-pressed="false">
+            🔇
+        </button>
+    </div>
+
+    <div class="lightbox" id="photo-lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close photo viewer">×</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous photo">‹</button>
+        <figure class="lightbox-figure">
+            <img id="lightbox-image" src="" alt="">
+            <figcaption id="lightbox-caption"></figcaption>
+        </figure>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next photo">›</button>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title description">
+  <title id="title">A birthday film for Anushka</title>
+  <desc id="description">A glowing pink and lavender birthday scene with a play symbol and birthday wishes.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#542860"/>
+      <stop offset=".52" stop-color="#a74792"/>
+      <stop offset="1" stop-color="#ef8bb9"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#ffe4f2" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#ffe4f2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fff3c4"/>
+      <stop offset=".5" stop-color="#fff"/>
+      <stop offset="1" stop-color="#ffbfdf"/>
+    </linearGradient>
+    <filter id="soft-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#background)"/>
+  <circle cx="640" cy="320" r="430" fill="url(#glow)"/>
+  <g fill="#fff3c4" opacity=".8">
+    <path d="m148 127 8 21 22 1-17 14 6 22-19-12-19 12 6-22-17-14 22-1z"/>
+    <path d="m1080 177 6 16 17 1-13 11 5 17-15-9-15 9 5-17-13-11 17-1z"/>
+    <path d="m1035 527 7 18 19 1-15 12 5 19-16-10-16 10 5-19-15-12 19-1z"/>
+    <circle cx="265" cy="344" r="5"/><circle cx="950" cy="310" r="5"/>
+    <circle cx="365" cy="168" r="4"/><circle cx="870" cy="566" r="4"/>
+  </g>
+  <g opacity=".36" fill="#ffd7eb">
+    <circle cx="190" cy="530" r="90"/><circle cx="1110" cy="330" r="120"/>
+  </g>
+  <rect x="106" y="74" width="1068" height="572" rx="38" fill="none" stroke="url(#frame)" stroke-opacity=".62" stroke-width="3"/>
+  <text x="640" y="260" text-anchor="middle" fill="#fff7fc" font-family="Georgia, serif" font-size="29" letter-spacing="9">A LITTLE BIRTHDAY FILM FOR</text>
+  <text x="640" y="355" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="88" font-style="italic" filter="url(#soft-glow)">Anushka</text>
+  <circle cx="640" cy="484" r="49" fill="#fff" fill-opacity=".92"/>
+  <path d="m628 457 42 27-42 27z" fill="#b44d94"/>
+  <text x="640" y="584" text-anchor="middle" fill="#fff4fa" font-family="Arial, sans-serif" font-size="20" letter-spacing="4">PRESS PLAY WHEN YOU'RE READY</text>
+</svg>
